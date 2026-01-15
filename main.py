@@ -4,8 +4,8 @@ import os, hashlib, base64
 from cryptography.fernet import Fernet
 
 # ===== CONFIG =====
-USERNAME = "admin"
-PASSWORD = "admin123"
+USERNAME = os.getenv("APP_USERNAME")
+PASSWORD = os.getenv("APP_PASSWORD")
 UPLOAD_DIR = "secure_uploads"
 
 os.makedirs(UPLOAD_DIR, exist_ok=True)
